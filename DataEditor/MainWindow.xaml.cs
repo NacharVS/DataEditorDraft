@@ -23,18 +23,23 @@ namespace DataEditor
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-           list1.ItemsSource = GenerationController.SendCards();
+           list1.ItemsSource = GenerationController.SendDocNames();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             list1.ItemsSource = GenerationController.SendDocuments();
+        }
+
+        private void list1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            GenerationController.GetSingleDocument(lbl1,lblType, lblValue, list1.SelectedItem.ToString());
         }
     }
 }

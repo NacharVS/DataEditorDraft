@@ -7,16 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="list1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,636,139"/>
-        <Label Content="Type" Margin="344,24,408,378"/>
-        <Label Content="Value" Margin="411,24,341,378"/>
-        <ComboBox HorizontalAlignment="Left" Margin="477,34,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Type" Margin="344,82,408,320"/>
-        <Label Content="Value" Margin="411,82,341,320"/>
-        <ComboBox HorizontalAlignment="Left" Margin="477,92,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Update" HorizontalAlignment="Left" Margin="674,63,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="list1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,636,139" SelectionChanged="list1_SelectionChanged"/>
         <Button Content="ShowCards" HorizontalAlignment="Left" Margin="204,34,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <Button Content="ShowDocs" HorizontalAlignment="Left" Margin="204,63,0,0" VerticalAlignment="Top" Width="63" Click="Button_Click_1"/>
+        <Label x:Name="lbl1" Content="Label" HorizontalAlignment="Left" Margin="332,28,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblType" Content="Label" HorizontalAlignment="Left" Margin="400,28,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblValue" Content="Label" HorizontalAlignment="Left" Margin="473,28,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
